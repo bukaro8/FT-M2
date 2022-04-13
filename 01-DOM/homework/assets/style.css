@@ -5,14 +5,23 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-image: url(https://images.unsplash.com/photo-1481026469463-66327c86e544?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=608&q=80);
+  background-position: center center;
+  background-repeat: none;
+  background-size: cover;
 }
-
+#createdBy{
+  color: rgb(16, 17, 124);
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 400;
+  
+}
 #header {
   width: 100%;
   position: absolute;
   top: 0;
   left: 0;
-  background: #428fbb;
+  background: #4250bb76;
   height: 56px;
   /* padding-left: 15px; */
   display: flex;
@@ -32,8 +41,8 @@ body {
 
 
 #container {
-  background-color: #428fbb;
-  box-shadow: 2px 2px 5px#000;
+  background-color: #42a1bb7d;
+  box-shadow: 2px 2px 5px #000;
   width: 50%;
   min-width: 700px;
   border-radius: 5px;
@@ -42,8 +51,11 @@ body {
 #inputContainer {
   display: flex;
   justify-content: center;
-  padding: 10px;
-  margin-bottom: 25px;
+ height: 4rem;
+ 
+}
+.content{
+  min-height:90vh ;
 }
 
 #toDoInput {
@@ -100,4 +112,12 @@ body {
 
 .completeCheckbox {
   transform: scale(1.8);
+}
+h1{
+  color: white;
+  font-weight: 700;
+  font-size: 3rem;
+  background-color: rgba(0, 110, 255, 0.37);
+  width: 30%;
+  border-radius: 15px;
 }
