@@ -92,3 +92,36 @@
     color: blue;
   }
 }
+.form{
+  .flex(column,space-around,center);
+  margin: auto;
+    width: 80%;
+  box-shadow: -2px 3px 15px 0px #000000;
+  border-radius: 15px;
+  height: 30vh;
+  min-height: fit-content;
+  margin-block-end:2rem ;
+  @media screen and (max-width:@phone){
+    min-height: 60vw;
+  }
+ 
+}
+.input-container{
+  width: 100%;
+  
+  .flex(row,space-around);
+  flex-wrap: wrap;
+  @media screen and (max-width:@phone){
+    width: fit-content;
+    display: block;
+    .form-input{
+      display: block;
+      margin:2rem;
+    }
+  }
+}
+.form-input{
+  .flex();
+  height: 4rem;
+  min-width: 160px;
+}
