@@ -1,1 +1,53 @@
 // Código de Nav acá
+// @import './mixins.less';
+.title{
+  .flex();
+  margin-block-start: 2%;
+  margin-block-end: 1%;
+}
+.navbar{
+  margin:auto;
+  // .border(green);
+  .flex(row);
+  width: 75%;
+  max-width: 100%;
+  @media screen and (max-width:715px){
+    font-size:1.4rem;
+    width: 950%;
+  }
+
+}
+.navbar-list{
+  .flex(row,space-around);
+  min-width: 70%;
+  margin-block-end: 1%;
+  @media screen and (max-width:@phone){
+    width:@phone;
+    margin-block-start: 2%;
+    margin-block-end: 4%;
+  }
+}
+.navbar-link{
+  // .border();
+  .flex();
+  font-size: 1.8vw;
+  
+  width: 18rem;
+  height: 3rem;
+  min-width: fit-content;
+  text-align: center;
+  margin-inline-start: 1%;
+  margin-inline-end: 1%;
+  &:hover{
+    background-color: rgb(166, 166, 222);
+    color: white;
+    // font-size: 2.2vw;
+    border-radius: 15px;
+  }
+  @media screen and (max-width:715px){
+    font-size:1.2rem;
+    margin-inline-start: 2%;
+    margin-inline-end: 2%;
+  }
+  
+}
