@@ -18,7 +18,10 @@ var traverseDomAndCollectElements = function(matchFunc, startEl) {
 
 var selectorTypeMatcher = function(selector) {
   // tu código aquí
-  
+  if(selector[0]==='.')return 'class';
+  if(selector[0]==='#')return 'id';
+  if(selector.indexOf('.',1)>0)return 'tag.class'
+  return 'tag'
 };
 
 // NOTA SOBRE LA FUNCIÓN MATCH
