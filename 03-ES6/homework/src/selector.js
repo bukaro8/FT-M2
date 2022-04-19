@@ -37,15 +37,16 @@ var matchFunctionMaker = function(selector) {
   } else if (selectorType === "class") {
     matchFunction=(par)=>{ 
       let aux=[...par.classList];
-      if(aux.length===0){return false;}
-      else if(aux.indexOf(selector.slice(1)> -1)){
-      return  true}
-      else return false
+      return (aux.indexOf(selector.slice(1)) > -1)?true:false
     }
   } else if (selectorType === "tag.class") {
-    
+    matchFunction=(par)=>{
+      let [tag,clase]=selector.split('.')
+      let aux=[...par.classList];
+      return (tag===par.localName && aux.includes(clase))? true:false
+    }
   } else if (selectorType === "tag") {
-    
+    matchFunction=(par)=>par.localName===selector?true:false
   }
   
   return matchFunction;
