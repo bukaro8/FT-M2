@@ -33,14 +33,21 @@ var matchFunctionMaker = function(selector) {
   var selectorType = selectorTypeMatcher(selector);
   var matchFunction;
   if (selectorType === "id") { 
-   
+    matchFunction=(par)=>par.id=== selector.slice(1)?true:false
   } else if (selectorType === "class") {
-    
+    matchFunction=(par)=>{ 
+      let aux=[...par.classList];
+      if(aux.length===0){return false;}
+      else if(aux.indexOf(selector.slice(1)> -1)){
+      return  true}
+      else return false
+    }
   } else if (selectorType === "tag.class") {
     
   } else if (selectorType === "tag") {
     
   }
+  
   return matchFunction;
 };
 
