@@ -9,7 +9,15 @@ var traverseDomAndCollectElements = function(matchFunc, startEl) {
   // usa matchFunc para identificar elementos que matchien
 
   // TU CÓDIGO AQUÍ
-  
+  if(matchFunc(startEl)){
+    resultSet.push(startEl)
+  }
+  let childrenArr= [...startEl.children]
+  childrenArr.forEach((ele)=>{
+    if(matchFunc(ele)){
+      resultSet.push(ele)
+    }})
+    return resultSet;
 };
 
 // Detecta y devuelve el tipo de selector
@@ -37,7 +45,7 @@ var matchFunctionMaker = function(selector) {
   } else if (selectorType === "class") {
     matchFunction=(par)=>{ 
       let aux=[...par.classList];
-      return (aux.indexOf(selector.slice(1)) > -1)?true:false
+      return (aux.includes(selector.slice(1)))?true:false
     }
   } else if (selectorType === "tag.class") {
     matchFunction=(par)=>{

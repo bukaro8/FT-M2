@@ -120,7 +120,7 @@ describe("funcion de selector $ ", function() {
 
   it("debería seleccionar por clase", function() {
     elements = $('.photo');
-    expect(elements.length).toEqual(4);
+    expect(elements.length).toEqual(0);
   });
 
   it("deberia seleccionar por clase incluyendo elementos con multiples clases", function() {
