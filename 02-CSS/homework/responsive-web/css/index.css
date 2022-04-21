@@ -258,6 +258,11 @@ footer {
   border-radius: 20px;
   height: 100%;
 }
+@media screen and (max-width: 500px) {
+  .home .ondas {
+    display: none;
+  }
+}
 .home .musica-nueva {
   padding: 15px;
 }
