@@ -17,7 +17,7 @@ export default function Card(props) {
         <h3>{props.min}</h3>
       </div>
       <div className='icon'>
-        <img src={`http://openweathermap.org/img/wn/${props.img}@2x.png`} alt="" srcset="" />
+        <img src={`http://openweathermap.org/img/wn/${props.img}@2x.png`} alt=""  />
       </div>
     </div>
   </div>
