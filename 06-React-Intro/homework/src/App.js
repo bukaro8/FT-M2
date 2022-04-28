@@ -26,6 +26,7 @@ function App() {
       <hr />
       <div>
         <SearchBar
+          // cities={data}
           onSearch={(ciudad) => alert(ciudad)}
         />
       </div>
