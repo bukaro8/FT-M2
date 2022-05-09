@@ -1,16 +1,28 @@
 import React, { useState } from "react";
 
 export default function SearchBar({onSearch}) {
-  return (
-    <form onSubmit={(e) => {
+  const [findCity, setFindCity]=useState('');
+  const changing=(e)=>{
+    e.preventDefault();
+    setFindCity(e.target.value)
+  }
+  const onSubmitForm=(e)=>{
       e.preventDefault();
-      onSearch("Cairns");
-    }}>
-      <input
-        type="text"
-        placeholder="Ciudad..."
+      onSearch(findCity);
+      setFindCity('')
+  }
+  return (
+    <form onSubmit={(e) => onSubmitForm(e)}>
+    <div className="input-group">
+      <input  
+              onChange={(e)=>changing(e)}
+              className="input-group-text"
+              type="text"
+              placeholder="Ciudad..."
+              value={findCity}
       />
-      <input type="submit" value="Agregar" />
+      <input className="btn btn-primary" type="submit" value="Agregar" />
+    </div>
     </form>
   );
 }

@@ -11,8 +11,6 @@ function App() {
   return (
     <div className="App">
       <NavBar></NavBar>
-      
-      <Header style={{    height: 'inherit'}}/>
       <div style={{display:'flex',flexDirection:'column', alignItems:'space-around',height:'50vh',justifyContent:'space-around'}}>
         <Cards cities={data}/>
         <SearchBar/>
