@@ -1,5 +1,6 @@
 import React ,{ useState } from 'react';
 import './App.css';
+import Card from './components/Card';
 import Cards from './components/Cards.jsx'
 // import SearchBar from './components/SearchBar.jsx'
 import Nav from './components/Nav.jsx'
@@ -39,6 +40,7 @@ export default function App() {
   return (
     <div className="App">
       <Nav onSearch={onSearch}/>
+      
       <Cards cities={cities} onClose={onClose}/>
       
     </div>
